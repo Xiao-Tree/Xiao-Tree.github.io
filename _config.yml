@@ -4,16 +4,18 @@
 
 # Site
 title: XiaoTree's 博客
-subtitle: ''
-description: ''
+subtitle: '个人博客'
+description: '记录所学所想'
 keywords:
 author: XiaoTree
-language: zh
+email: xiaolltree@163.com
+language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://xiao-tree.github.io
+root: 
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -95,10 +97,14 @@ ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: landscape
+## Themes: https://hexo.io/themes/ butterfly landscape
+theme: butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/Xiao-Tree/Xiao-Tree.github.io.git
+  branch: main
+  message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
+  token: $GIT_TOKEN
