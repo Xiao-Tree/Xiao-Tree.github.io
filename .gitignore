@@ -7,4 +7,6 @@ public/
 .deploy*/
 _multiconfig.yml
 auth.yml
+themes/*/.--github/**
+themes/*/.--git/**
 .env
