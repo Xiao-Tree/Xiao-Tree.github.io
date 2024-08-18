@@ -1461,7 +1461,7 @@ canvas:not(#ribbon-canvas),
   --tab-button-active-bg: #fff;
   --card-bg: #fff;
   --sidebar-bg: #f6f8fa;
-  --btn-hover-color: #0c2;
+  --btn-hover-color: #ff0015;
   --btn-color: #fff;
   --btn-bg: #009919;
   --text-bg-hover: rgba(0,153,25,0.7);
@@ -1475,7 +1475,7 @@ canvas:not(#ribbon-canvas),
   --toc-link-color: #666261;
   --card-box-shadow: 0 3px 8px 6px rgba(7,17,27,0.05);
   --card-hover-box-shadow: 0 3px 8px 6px rgba(7,17,27,0.09);
-  --pseudo-hover: #0c2;
+  --pseudo-hover: #ff0015;
   --headline-presudo: #a0a0a0;
   --scrollbar-color: #009919;
   --default-bg-color: #009919;
@@ -1554,7 +1554,7 @@ table td {
   vertical-align: middle;
 }
 *::selection {
-  background: #0c2;
+  background: #061;
   color: #f7f7f7;
 }
 button {
@@ -2068,7 +2068,7 @@ figure.highlight pre .javascript .function {
   border-color: var(--pseudo-hover);
 }
 .article-sort-item-time {
-  color: #009919;
+  color: #ff00d4;
   font-size: 95%;
 }
 .article-sort-item-time time {
@@ -2127,7 +2127,7 @@ figure.highlight pre .javascript .function {
 }
 .category-lists .category-list .category-list-count {
   margin-left: 8px;
-  color: #009919;
+  color: #ff00d4;
 }
 .category-lists .category-list .category-list-count:before {
   content: '(';
@@ -2479,7 +2479,7 @@ figure.highlight pre .javascript .function {
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap {
   margin: 6px 0;
-  color: #009919;
+  color: #ff00d4;
   font-size: 0.9em;
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .post-meta-date {
@@ -2501,7 +2501,7 @@ figure.highlight pre .javascript .function {
   margin: 0 4px;
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap a {
-  color: #009919;
+  color: #ff00d4;
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap a:hover {
   color: #009919;
@@ -2693,7 +2693,7 @@ h1.page-title + .tag-cloud-list {
 #aside-content .aside-list > .aside-list-item .content > time,
 #aside-content .aside-list > .aside-list-item .content > .name {
   display: block;
-  color: #009919;
+  color: #ff00d4;
   font-size: 85%;
 }
 #aside-content .aside-list > .aside-list-item .content > .title,
@@ -4489,7 +4489,7 @@ h1.page-title + .tag-cloud-list {
 #waline-wrap {
   --waline-font-size: 1.1em;
   --waline-theme-color: #009919;
-  --waline-active-color: #0c2;
+  --waline-active-color: #ff0015;
 }
 #waline-wrap .wl-comment-actions > button:not(last-child) {
   padding-right: 4px;
