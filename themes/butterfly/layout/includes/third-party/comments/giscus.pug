@@ -1,11 +1,13 @@
-- const { use, lazyload } = theme.comments
-- const { repo, repo_id, category_id, light_theme, dark_theme, js, option } = theme.giscus
-- const giscusUrl = js || 'https://giscus.app/client.js'
+- const { repo, repo_id, category_id, theme:themes, option } = theme.giscus
+- const giscusUrl = theme.asset.giscus || 'https://giscus.app/client.js'
 - const giscusOriginUrl = new URL(giscusUrl).origin
+- const { use, lazyload } = theme.comments
 
 script.
   (()=>{
-    const getGiscusTheme = theme => theme === 'dark' ? '!{dark_theme}' : '!{light_theme}'
+    const getGiscusTheme = theme => {
+      return theme === 'dark' ? '!{themes.dark}' : '!{themes.light}'
+    }
 
     const loadGiscus = () => {
       const config = Object.assign({
@@ -28,17 +30,17 @@ script.
     }
 
     const changeGiscusTheme = theme => {
-      const iframe = document.querySelector('#giscus-wrap iframe')
-      if (iframe) {
-        const message = {
-          giscus: {
-            setConfig: {
-              theme: getGiscusTheme(theme)
-            }
-          }
-        }
-        iframe.contentWindow.postMessage(message, '!{giscusOriginUrl}')
+      const sendMessage = message => {
+        const iframe = document.querySelector('iframe.giscus-frame')
+        if (!iframe) return
+        iframe.contentWindow.postMessage({ giscus: message }, '!{giscusOriginUrl}')
       }
+
+      sendMessage({
+        setConfig: {
+          theme: getGiscusTheme(theme)
+        }
+      });
     }
 
     btf.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')

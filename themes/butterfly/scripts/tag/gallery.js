@@ -19,7 +19,6 @@ const gallery = (args, content) => {
 
   if (args[0] === 'url') {
     [type, dataStr, button] = args // url,[link],[lazyload]
-    dataStr = urlFor(dataStr)
   } else {
     [button] = args // [lazyload]
     const regex = /!\[(.*?)\]\(([^\s]*)\s*(?:["'](.*?)["']?)?\s*\)/g
@@ -40,7 +39,9 @@ const gallery = (args, content) => {
   }
 
   return `<div class="gallery-container" data-type="${type}" data-button="${button}">
-      <div class="gallery-items">${dataStr}</div>
+      <div class="gallery-data">${dataStr}</div>
+      <div class="gallery-items">
+      </div>
     </div>`
 }
 

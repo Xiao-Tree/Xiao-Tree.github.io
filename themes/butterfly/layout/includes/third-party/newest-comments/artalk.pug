@@ -25,7 +25,7 @@ script.
         for (let i = 0; i < array.length; i++) {
           result += '<div class=\'aside-list-item\'>'
 
-          if (!{theme.aside.card_newest_comments.avatar}) {
+          if (!{theme.newest_comments.avatar}) {
             const name = '!{theme.lazyload.enable ? "data-lazy-src" : "src"}'
             result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
           }
@@ -60,7 +60,7 @@ script.
 
     const searchParams = new URLSearchParams({
       'site_name': '!{site}',
-      'limit': '!{theme.aside.card_newest_comments.limit}',
+      'limit': '!{theme.newest_comments.limit}',
     })
 
     const getComment = async () => {
@@ -81,7 +81,7 @@ script.
             'date': e.date,
           }
         })
-        btf.saveToLocal.set('artalk-newest-comments', JSON.stringify(artalk), !{theme.aside.card_newest_comments.storage}/(60*24))
+        saveToLocal.set('artalk-newest-comments', JSON.stringify(artalk), !{theme.newest_comments.storage}/(60*24))
         generateHtml(artalk)
       } catch (e) {
         console.log(e)
@@ -92,7 +92,7 @@ script.
 
     const newestCommentInit = () => {
       if (document.querySelector('#card-newest-comments .aside-list')) {
-        const data = btf.saveToLocal.get('artalk-newest-comments')
+        const data = saveToLocal.get('artalk-newest-comments')
         if (data) {
           generateHtml(JSON.parse(data))
         } else {
@@ -102,6 +102,5 @@ script.
     }
 
     newestCommentInit()
-    btf.addGlobalFn('pjaxComplete', newestCommentInit, 'artalk_newestComment')
-
+    document.addEventListener('pjax:complete', newestCommentInit)
   })
