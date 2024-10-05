@@ -44,7 +44,7 @@ code_word_wrap: false
 #   icon: link || the description || color
 social:
   fab fa-github: https://github.com/Xiao-Tree || Github || '#24292e'
-  fas fa-envelope: xiaolltree@163.com || Email || '#4a7dbe'
+  fas fa-envelope: xiaolltree@163.com || Email || '#24292e'
 # Image (图片设置)
 # --------------------------------------
 
@@ -929,6 +929,8 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+    - '<script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?d2ee90a5dc6ff89704dda9ab7268c967";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script>'
+
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
     # - <script src="xxxx"></script>
