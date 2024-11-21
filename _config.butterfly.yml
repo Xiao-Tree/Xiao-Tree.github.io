@@ -1,10 +1,10 @@
-# Navigation bar settings (導航欄設置)
+# Navigation bar settings (导航栏设置)
 # see https://butterfly.js.org/posts/4aa8abbe/##導航欄設置-Navigation-bar-settings
 # --------------------------------------
 
 nav:
-  logo: /img/favicon.png
-  display_title: true
+  logo: /assets/favicon.ico
+  display_title: false
   fixed: false # fixed navigation bar
 
 # Menu 菜单
@@ -49,24 +49,24 @@ social:
 # --------------------------------------
 
 # Favicon（站点图标）
-favicon: /img/favicon.png
+favicon: /assets/favicon.ico
 
 # Avatar (头像)
 avatar:
-  img: /img/avatar.png
+  img: /assets/avatar.png
   effect: false
 
 # Disable all banner image
 disable_top_img: false
 
 # The banner image of home page
-index_img: /img/background.jpg
+index_img: /assets/background/a0c3a00b71884b3f887fb80e1525e9ee.jpg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: /img/star.png
+default_top_img: 'linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%)'
 
 # The banner image of archive page
-archive_img: 'linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347)'
+archive_img:
 
 # If the banner of tag page not setting, it will show the top_img
 # note: tag page, not tags page (子标签页面的 top_img)
@@ -96,21 +96,21 @@ cover:
   position: both
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
   default_cover:
-    - /img/star.png
-    - /img/svg/analytics.svg
-    - /img/svg/astro.svg
-    - /img/svg/drawing.svg
-    - /img/svg/falling.svg
-    - /img/svg/mobileinhand.svg
-    - /img/svg/recruitment.svg
-    - /img/svg/searching.svg
-    - /img/svg/sleeping.svg
-    - /img/svg/teamwork.svg
+    - /assets/star.png
+    - /assets/svg/analytics.svg
+    - /assets/svg/astro.svg
+    - /assets/svg/drawing.svg
+    - /assets/svg/falling.svg
+    - /assets/svg/mobileinhand.svg
+    - /assets/svg/recruitment.svg
+    - /assets/svg/searching.svg
+    - /assets/svg/sleeping.svg
+    - /assets/svg/teamwork.svg
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
-  flink: /img/friend_404.gif
-  post_page: /img/404.jpg
+  flink: /assets/friend_404.gif
+  post_page: /assets/404.jpg
 
 # A simple 404 page
 error_404:
@@ -577,7 +577,7 @@ messenger:
 
 # Baidu Analytics
 # https://tongji.baidu.com/web/welcome/login
-baidu_analytics:
+baidu_analytics: d2ee90a5dc6ff89704dda9ab7268c967
 
 # Google Analytics
 # https://analytics.google.com/analytics/web/
@@ -622,24 +622,24 @@ site_verification:
 
 # Theme color for customize
 # Notice: color value must in double quotes like "#000" or may cause error!
-
+# https://colorable.jxnblk.com/005832/fb6692
 theme_color:
   enable: true
-  main: "#009919"
-  paginator: "#0055ff"
-  button_hover: "#ff0015"
-  text_selection: "#006611"
-  link_color: "#00cc22"
-  meta_color: "#009919"
+  main: "#f9566d"
+  paginator: "#f9566d"
+  button_hover: "#f9566d"
+  text_selection: "#f9566d"
+  link_color: "#2fe36b"
+  meta_color: "#6abcff"
   hr_color: "#A4D8FA"
   code_foreground: "#F47466"
   code_background: "rgba(27, 31, 35, .05)"
   toc_color: "#ffaa00"
   blockquote_padding_color: "#a8b1ff"
   blockquote_background_color: "#a8b1ff"
-  scrollbar_color: "#009919"
-  meta_theme_color_light: "#006611"
-  meta_theme_color_dark: "#00ff2a"
+  scrollbar_color: "#5e4f6d"
+  meta_theme_color_light: "#f9566d"
+  meta_theme_color_dark: "#07111f"
 
 # The top_img settings of home page
 # default: top img - full screen, site info - middle (默認top_img全屏，site_info在中間)
@@ -785,7 +785,7 @@ subtitle:
 
 # Loading Animation (加载动画)
 preloader:
-  enable: true
+  enable: false
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
@@ -929,8 +929,6 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    - '<script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?d2ee90a5dc6ff89704dda9ab7268c967";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script>'
-
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
     # - <script src="xxxx"></script>

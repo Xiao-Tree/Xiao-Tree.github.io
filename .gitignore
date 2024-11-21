@@ -6,7 +6,6 @@ node_modules/
 public/
 .deploy*/
 _multiconfig.yml
-auth.yml
-themes/*/.github/**
-themes/*/__.git/**
+themes/*/.github
+themes/*/.git
 .env
